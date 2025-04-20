@@ -55,8 +55,9 @@
     ```
     
 3. **Remove Spring Boot Maven Plugins**
-    
-    因为 Starter 是一个**库 (library)**，而不是一个可执行的应用程序，所以不需要 `spring-boot-maven-plugin` 来打包成可执行 JAR。如果你的 `pom.xml` 中有类似下面的片段，请将其**删除**：
+
+   Since Starter is a library not an executable application, we don't need `spring-boot-maven-plugin` to package it as an executable JAR.
+   Delete the following part in the Pom.xml:
     
     ```xml
     <build>
@@ -69,8 +70,8 @@
     </build>
     ```
     
-4. **Create Bussiness Logic Class**
-5. **Register Configuration Class**
+5. **Create Bussiness Logic Class**
+6. **Register Configuration Class**
     1. Create a `org.springframework.boot.autoconfigure.AutoConfiguration.imports` file under `src/main/resources/META-INF/spring/` 
     2.Content is the whole name of autoconfiguration class:
         
@@ -78,11 +79,11 @@
         com.creaturelove.GreetingAutoConfiguration
         ```
         
-6. **Build and Install Starter**
+7. **Build and Install Starter**
     
     Maven Clean Install
     
-7. **Using the Starter**
+8. **Using the Starter**
     1. Add Dependency
         
         ```xml
